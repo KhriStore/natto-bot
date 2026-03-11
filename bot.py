@@ -7,7 +7,7 @@ import os
 from web_server import keep_alive
 
 # Konfigurasi - PAKE ENVIRONMENT VARIABLE
-TOKEN = os.environ.get('MTQ4MTMzODQwMjQ1MTIyNjczNA.GLWnl4.-KnqCbCM1fTNYOpbgx97gWcIUeGDSdmk166LEo')  # AMBIL DARI ENVIRONMENT
+TOKEN = os.environ.get('DISCORD_TOKEN')  # AMBIL DARI ENVIRONMENT
 TARGET_CHANNEL_NAME = os.environ.get('TARGET_CHANNEL', "➕ Buat Channel")
 
 # Data untuk menyimpan channel yang dibuat
@@ -615,4 +615,5 @@ async def custom_help(ctx):
 # Jalankan bot
 if __name__ == "__main__":
     keep_alive()  # NYALAKAN WEB SERVER DULU
+
     bot.run(TOKEN)
